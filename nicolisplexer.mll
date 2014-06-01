@@ -19,4 +19,5 @@ rule nicolisp_lex = parse
         { printf "Unrecognized character: %c\n" c;
           nicolisp_lex lexbuf
         }
+  | eof { raise End_of_file }
 
